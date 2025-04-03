@@ -7,8 +7,6 @@ import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.RequestBody.Companion.toRequestBody
-import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import io.ktor.http.*
 import java.net.URL
 
 
@@ -26,7 +24,6 @@ class WikipediaDeepseekService {
         val titleResponse = client.newCall(titleRequest).execute()
         val titleJson = JSONObject(titleResponse.body?.string())
         val title = titleJson.getString("title")
-
         // 2. Формируем URL статьи
         val articleUrl_demo= "https://en.wikipedia.org/wiki/${title.replace(" ", "_")}"
         val articleUrl = URL(articleUrl_demo)
@@ -69,7 +66,6 @@ class WikipediaDeepseekService {
                 "stream": false
             }
         """.trimIndent()
-
         val request = Request.Builder()
             .url(deepSeekApiUrl)
             .addHeader("Content-Type", "application/json")

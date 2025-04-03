@@ -29,7 +29,6 @@ dependencies {
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 	implementation("com.squareup.okhttp3:okhttp:4.12.0")
-	implementation("com.aallam.openai:openai-client:3.7.0")
 	implementation("org.json:json:20231013")
 }
 
