@@ -1,8 +1,8 @@
 package com.example.demo.DTO
 import java.net.URL
 class WikiArticle(
-    val Summerizearticle:String,
-    val topics: List<String>,
+    val summarizedtext:String,
     val Url: URL,
     val originalTitle: String,
 )
+//val Summerizearticle:String,
