@@ -31,7 +31,8 @@ dependencies {
 	implementation("com.squareup.okhttp3:okhttp:4.12.0")
 	implementation("org.json:json:20231013")
 	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0")
-	//implementation("org.springframework.ai:spring-ai-starter-model-openai")
+	implementation("org.springframework.ai:spring-ai-starter-openai:0.8.1")
+
 }
 
 kotlin {
@@ -48,4 +49,7 @@ allOpen {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+repositories {
+	mavenCentral()
 }
