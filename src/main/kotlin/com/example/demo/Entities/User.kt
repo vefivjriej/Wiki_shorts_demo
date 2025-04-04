@@ -1,17 +1,14 @@
-package Entities
+package com.example.demo.Entities
 
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
-import java.net.URL
 
 @Entity
-data class WikiArticle(
+data class User(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = 0,
-    val Summerizearticle:String,
-    val topics: List<String>,
-    val Url: URL,
-    val originalTitle: String,
+    val Id: Long = 0,
+    val gmail: String,
+    val password:Long,
 )
