@@ -1,4 +1,4 @@
-package com.example.demo.service
+package com.example.demo.Service
 
 import okhttp3.OkHttpClient
 import okhttp3.Request

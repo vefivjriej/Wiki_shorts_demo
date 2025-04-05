@@ -1,14 +1,15 @@
 package com.example.demo.controller
 
-import com.example.demo.dto.WikiArticle
-import com.example.demo.service.DeepSeekService
-import com.example.demo.service.WikipediaDeepseekService
+import com.example.demo.Service.DeepSeekService
+import com.example.demo.Service.WikipediaDeepseekService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
+@RequestMapping("api/skills")
 class MyController @Autowired constructor(
     private val deepSeekService: DeepSeekService,
     private val wikipediaDeepseekService: WikipediaDeepseekService
@@ -21,7 +22,7 @@ class MyController @Autowired constructor(
     }
 
     @GetMapping("/article/random")
-    fun getRandomArticle(): WikiArticle {
-        return wikipediaDeepseekService.fetchRandomArticle()
+    fun getRandomArticle(): String {
+        return wikipediaDeepseekService.fetchRandomArticle().summarizedText
     }
 }
