@@ -1,4 +1,4 @@
-package com.example.demo.Controller
+package com.example.demo.controller
 
 class Login {
     //раф пиши
