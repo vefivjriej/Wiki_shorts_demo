@@ -9,7 +9,7 @@ class RegisterService(
     private val userRepository: UserRepository
 ) {
     fun register(userEntity: UserEntity): UserEntity {
-        if (!userRepository.existsByEmail(userEntity.email) and userRepository.existsByUserName(userEntity.name)) {
+        if (!userRepository.existsByEmail(userEntity.email) and userRepository.existsByUserName(userEntity.userName)) {
             userRepository.save(userEntity)
         } else {
             throw RuntimeException("Такой ползователь уже существует")

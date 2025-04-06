@@ -32,7 +32,7 @@ class MyController @Autowired constructor(
     @PostMapping("/registration")
     fun register(@RequestBody request: UserEntity):String{
         registerService.register(request)
-        return "Пользователь ${request.name} успешно зарегестрирован!"
+        return "Пользователь ${request.userName} успешно зарегестрирован"
     }
 }
 //    @GetMapping("/ai/shorten")
