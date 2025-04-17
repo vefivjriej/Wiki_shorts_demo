@@ -12,8 +12,8 @@ class RegisterService(
         if (!userRepository.existsByEmail(userEntity.email) and userRepository.existsByUserName(userEntity.userName)) {
             userRepository.save(userEntity)
         } else {
-            throw RuntimeException("Такой ползователь уже существует")
+            throw RuntimeException("Такой пользователь уже существует")
         }
         return userEntity
     }
-}
+}//

@@ -39,4 +39,4 @@ class MyController @Autowired constructor(
 //    fun shortenText(@RequestParam(value = "text") text: String): Map<String, String> {
 //        val shortenedText = deepSeekService.shortenText(text)
 //        return mapOf("shortenedText" to shortenedText)
-//    }
+//    }//
